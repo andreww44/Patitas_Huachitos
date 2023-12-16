@@ -1,5 +1,6 @@
 package pack.patitas
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,10 +14,11 @@ import org.json.JSONObject
 import pack.patitas.APIRequest.APICallback
 import pack.patitas.APIRequest.ApiTask
 import pack.patitas.adapters.PetAdapterRecyclerCard
+import pack.patitas.adapters.RecyplerPetInterface
 import pack.patitas.identies.Pet
 import java.io.IOException
 
-class ListPets : AppCompatActivity(), APICallback {
+class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter : PetAdapterRecyclerCard
@@ -49,6 +51,9 @@ class ListPets : AppCompatActivity(), APICallback {
             Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT).show()
 
         }
+
+        listaDeMascotas
+
     }
 
     override fun onSuccess(data: String) {
@@ -73,16 +78,26 @@ class ListPets : AppCompatActivity(), APICallback {
             for (i in 0 until dataArray.length()) {
 
                 val itemObject = dataObject.getJSONObject(i)
+                val id = itemObject.getInt("id")
                 val name = itemObject.getString("nombre")
-                val region= itemObject.getString("comuna")
-                val age = itemObject.getString("edad")
                 val types = itemObject.getString("tipo")
+                val age = itemObject.getString("edad")
                 val state = itemObject.getString("estado")
                 val gender = itemObject.getString("genero")
-                val description = itemObject.getString("desc_fisica")
+                val des1 = itemObject.getString("desc_fisica")
+                val des2 = itemObject.getString("desc_personalidad")
+                val des3 = itemObject.getString("desc_adicional")
+                val sterilized = itemObject.getInt("esterilizado")
+                val vaccine = itemObject.getInt("vacunas")
                 val urlImage = itemObject.getString("imagen")
+                val team = itemObject.getString("equipo")
+                val region = itemObject.getString("region")
+                val commune = itemObject.getString("comuna")
+                val url = itemObject.getString("url")
 
-                val newpet = Pet(name, region, age, types, state, gender, description, urlImage)
+
+                val newpet = Pet(id, name, types, age, state, gender, des1, des2, des3,
+                                 sterilized, vaccine, urlImage, team, region, commune, url)
                 list.add(newpet)
             }
 
@@ -92,5 +107,9 @@ class ListPets : AppCompatActivity(), APICallback {
             e.printStackTrace()
         }
         return list
+    }
+
+    override fun onItemClick(position: Int) {
+        //
     }
 }

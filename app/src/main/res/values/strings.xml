@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Patitas</string>
+
+    <!-- Pet Description Default -->
+    <string name="numberDefaul">0</string>
+    <string name="namePet">Sushi</string>
+    <string name="typePet">Perro</string>
+    <string name="agePet">20 Meses</string>
+    <string name="statePet">En Adopcion</string>
+    <string name="genderPet">Macho</string>
+    <string name="descDefault">Lorem ipsum dolor sit amet consectetur adipiscing elit aenean senectus purus, class vehicula viverra feugiat facilisis litora cum auctor nullam facilisi, varius dignissim eu mollis tellus risus egestas blandit donec. Accumsan curabitur facilisis eros himenaeos dictum quisque cubilia urna feugiat, nisl imperdiet cursus rutrum neque sagittis ligula fusce. Euismod platea congue sagittis id volutpat tellus curabitur vitae interdum viverra ligula sociosqu, netus magnis pharetra quam lectus nisi nullam integer purus risus dapibus justo, malesuada donec non laoreet duis per arcu felis nascetur sapien pulvinar. </string>
+    <string name="team">ColoColo</string>
+    <string name="region">Maule</string>
+    <string name="commune">Molina</string>
+
+    <string name="datos">Datos</string>
+    <string name="link">Visitar Link</string>
+
+
+
 </resources>
