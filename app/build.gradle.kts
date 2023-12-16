@@ -46,10 +46,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.google.code.gson:gson:2.9.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.card-view:card-view:1.0.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation ("org.json:json:20210307")
-    implementation ("com.github.bumptech.glide:glide:4.12.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
-
 }

@@ -7,12 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import pack.patitas.R
 import pack.patitas.identies.Pet
 
-class PetAdapterRecyclerCard (private val pets: List<Pet>): RecyclerView.Adapter<PetAdapterRecyclerCard.PetViewHolder>(){
+
+class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.Adapter<PetAdapterRecyclerCard.PetViewHolder>(){
 
     inner class PetViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
@@ -58,14 +57,17 @@ class PetAdapterRecyclerCard (private val pets: List<Pet>): RecyclerView.Adapter
         holder.regionTextView.text = "Region: ${currentPet.region}"
         holder.typeTextView.text = "Tipo: ${currentPet.types}"
         // Cargar imagen desde la URL usando Glide
-        Glide.with(holder.itemView.context)
-            .load(currentPet.urlImage)
-            .apply(RequestOptions().placeholder(R.mipmap.placeholder_image_round)) // Puedes agregar un placeholder si lo deseas
-            .into(holder.imageImageview)
+
     }
 
     override fun getItemCount(): Int {
         return pets.size
+    }
+
+    fun clearAndAddNewList(newList: List<Pet>) {
+        pets.clear()
+        pets.addAll(newList)
+        notifyDataSetChanged()
     }
 
 
