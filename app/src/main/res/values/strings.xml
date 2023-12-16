@@ -17,6 +17,10 @@
     <string name="link">Visitar Página</string>
     <string name="search">¿Qué Estás Buscando?</string>
     <string name="adopme"> Adoptame!!!  </string>
+    <string name="titulo">PATITAS</string>
+    <string name="adopta">ADOPTA</string>
+    <string name="agradecimientos">AGRADECIMIENTOS A HUACHITOS.CL</string>
+    <string name="creadopor">"CREADO POR DANIEL ARIAS Y ALVARO MONSALVE"</string>
 
 
 </resources>

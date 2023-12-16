@@ -20,9 +20,10 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:titleTextColor="@color/white"
 
-            app:title="Huachitos"/>
+            app:titleTextColor="@color/white"
+            android:fontFamily="@font/fuenteanimal"
+            app:title="@string/titulo"/>
 
         <EditText
             android:id="@+id/searcText"

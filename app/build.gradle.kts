@@ -53,4 +53,5 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation ("org.json:json:20210307")
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 }
