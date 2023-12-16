@@ -1,10 +1,15 @@
 package pack.patitas
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import coil.load
+import java.net.URI
 
 
 class PetDetailActivity : AppCompatActivity() {
@@ -19,20 +24,8 @@ class PetDetailActivity : AppCompatActivity() {
         val petDesf = intent.getStringExtra("petDesF")
         val petDesp = intent.getStringExtra("petDesP")
         val petDesa = intent.getStringExtra("petDesA")
-        var petSter = intent.getStringExtra("petRegion")
-        if (petSter == "1"){
-            petSter = "SI"
-        }
-        else{
-            petSter = "NO"
-        }
-        var petVac = intent.getStringExtra("petSter")
-        if (petVac == "1"){
-            petVac = "SI"
-        }
-        else{
-            petVac = "NO"
-        }
+        val petSter = intent.getStringExtra("petSter")
+        val petVac = intent.getStringExtra("petVac")
         val petImage = intent.getStringExtra("petImage")
         val petTeam = intent.getStringExtra("petTeam")
         val petRegion = intent.getStringExtra("petRegion")
@@ -67,11 +60,26 @@ class PetDetailActivity : AppCompatActivity() {
         ptext.text = petDesp
         atext.text = petDesa
 
-        // Cargar la imagen usando Coil
+        val toolbar: Toolbar = findViewById(R.id.toolbar2)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.title = petName
+
+
         imageView.load(petImage) {
-            placeholder(R.mipmap.placeholder_image_foreground) // Drawable de marcador de posición
-            //error(R.drawable.error) // Drawable a mostrar en caso de error
+            placeholder(R.mipmap.placeholder_image_foreground)
+        }
+        val button: Button = findViewById(R.id.link_2)
+        button.setOnClickListener(){
+            openUrl(petUrl)
+
         }
 
+    }
+
+    private fun openUrl(link: String?) {
+        val uri = Uri.parse(link)
+        val inten = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(inten)
     }
 }

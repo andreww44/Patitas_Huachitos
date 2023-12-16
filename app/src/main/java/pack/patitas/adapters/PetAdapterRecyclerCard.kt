@@ -44,13 +44,24 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
                         putExtra("petDesF", selectedPet.desF)
                         putExtra("petDesP", selectedPet.desP)
                         putExtra("petDesA", selectedPet.desA)
-                        putExtra("petSter", selectedPet.sterilized)
-                        putExtra("petVac", selectedPet.vaccines)
                         putExtra("petImage", selectedPet.urlImage)
                         putExtra("petTeam", selectedPet.team)
                         putExtra("petRegion", selectedPet.region)
                         putExtra("petCommune", selectedPet.commune)
                         putExtra("petUrl", selectedPet.url)
+
+                        if(selectedPet.vaccines == 1){
+                            putExtra("petVac", "SI")
+                        }else{
+                            putExtra("petVac", "NO")
+                        }
+                        if(selectedPet.sterilized == 1){
+                            putExtra("petSter", "SI")
+                        }else{
+                            putExtra("petSter", "NO")
+                        }
+
+
                     }
 
 
@@ -85,6 +96,7 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
         holder.typeTextView.text = "${currentPet.types}"
         holder.imageImageview.load(currentPet.urlImage){
             placeholder(R.mipmap.placeholder_image_foreground)
+
         }
 
     }

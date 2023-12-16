@@ -4,28 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/background"
     tools:context=".ListPets">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="@color/background"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tittle"
-            android:layout_width="392dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="40dp"
-            android:text="Lista"
-            android:textSize="34sp"
-            android:textAlignment="center"
-            android:textStyle="bold" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:titleTextColor="@color/white"
+
+            app:title="Huachitos"/>
+
+        <EditText
+            android:id="@+id/searcText"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listRecycler"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:backgroundTint="@color/backgroundCard"
-            android:layout_height="684dp" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/backgroundCard" />
 
     </LinearLayout>
 

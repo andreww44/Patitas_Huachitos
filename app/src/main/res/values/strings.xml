@@ -14,8 +14,9 @@
     <string name="commune">Molina</string>
 
     <string name="datos">Datos</string>
-    <string name="link">Visitar Link</string>
-
+    <string name="link">Visitar Página</string>
+    <string name="search">¿Qué Estás Buscando?</string>
+    <string name="adopme"> Adoptame!!!  </string>
 
 
 </resources>
