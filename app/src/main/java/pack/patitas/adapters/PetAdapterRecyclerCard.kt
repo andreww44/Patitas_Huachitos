@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import pack.patitas.R
 import pack.patitas.identies.Pet
 
@@ -56,7 +57,9 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
         holder.ageTextView.text = "Edad: ${currentPet.age}"
         holder.regionTextView.text = "Region: ${currentPet.region}"
         holder.typeTextView.text = "Tipo: ${currentPet.types}"
-        // Cargar imagen desde la URL usando Glide
+        holder.imageImageview.load(currentPet.urlImage){
+            placeholder(R.mipmap.placeholder_image_foreground)
+        }
 
     }
 

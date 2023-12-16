@@ -80,7 +80,7 @@ class ListPets : AppCompatActivity(), APICallback {
                 val state = itemObject.getString("estado")
                 val gender = itemObject.getString("genero")
                 val description = itemObject.getString("desc_fisica")
-                val urlImage = itemObject.getString("url")
+                val urlImage = itemObject.getString("imagen")
 
                 val newpet = Pet(name, region, age, types, state, gender, description, urlImage)
                 list.add(newpet)
