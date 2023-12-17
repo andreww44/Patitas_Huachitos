@@ -77,3 +77,22 @@ data class Pet(
     }
 
 }
+fun Pet.toEntity(): mascotasEntity {
+    return mascotasEntity(
+        id = this.id,
+        name = this.name ?: "",
+        type = this.types ?: "",
+        age = this.age ?: "",
+        state = this.state ?: "",
+        gender = this.gender ?: "",
+        physicalDescription = this.desF ?: "",
+        personalityDescription = this.desP ?: "",
+        additionalDescription = this.desA ?: "",
+        sterilized = this.sterilized,
+        vaccinated = this.vaccines,
+        imageUrl = this.urlImage ?: "",
+        team = this.team ?: "",
+        region = this.region ?: "",
+        commune = this.commune ?: "",
+        url = this.url ?: "")
+}

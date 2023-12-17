@@ -4,11 +4,13 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import pack.patitas.FormularioActivity
 import pack.patitas.PetDetailActivity
 import pack.patitas.R
 import pack.patitas.identies.Pet
@@ -78,6 +80,18 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
 
                 }
                 true
+            }
+        }
+        val formularioButton: Button = itemView.findViewById(R.id.adoptme)
+        init {
+            formularioButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val selectedPet = pets[position]
+                    val context = itemView.context
+                    val intent = Intent(context, FormularioActivity::class.java)
+                    context.startActivity(intent)
+                }
             }
         }
     }

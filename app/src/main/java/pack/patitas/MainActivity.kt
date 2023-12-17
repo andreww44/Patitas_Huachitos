@@ -1,12 +1,14 @@
 package pack.patitas
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import pl.droidsonroids.gif.GifImageView
 
+
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,5 +21,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
     }
 }

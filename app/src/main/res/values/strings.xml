@@ -21,10 +21,18 @@
     <string name="adopta">ADOPTA</string>
     <string name="agradecimientos">AGRADECIMIENTOS A HUACHITOS.CL</string>
     <string name="creadopor">"CREADO POR DANIEL ARIAS Y ALVARO MONSALVE"</string>
-    <string name="nameandlastname">Escribe tu Nombre y Apellido</string>
-    <string name="talkabout">Cuéntanos tu nombre completo</string>
-
-
+    <string name="nameandlastname">Tu Nombre y Apellido</string>
+    <string name="correo">Tu correo</string>
+    <string name="telefono">Tu telefono de contacto</string>
+    <string name="nacimiento">Tu fecha de nacimiento</string>
+    <string name="rut">Tu Rut</string>
+    <string name="actividad">Tu actividad economica, oficio o profesion</string>
+    <string name="nameandlastnameIn">Ingresa tu Nombre y Apellido</string>
+    <string name="correoIn">Ingresa tu correo</string>
+    <string name="telefonoIn">Ingresa tu numero de telefono</string>
+    <string name="nacimientoIn"> dd/mm/aaaa</string>
+    <string name="rutIn">Ingresa tu Rut</string>
+    <string name="actividadIn">Dinos tu actividad economica, oficio o profesion</string>
 
 
 </resources>

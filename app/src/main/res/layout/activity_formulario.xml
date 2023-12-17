@@ -26,12 +26,12 @@
             android:id="@+id/image_detail"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginTop="20dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:src="@mipmap/placeholder_image_foreground" />
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/adopta" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/nameandlastname"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -66,7 +66,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:paddingStart="5dp"
+                        android:hint="@string/nameandlastnameIn"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"
@@ -85,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/rut"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -96,7 +97,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:hint="@string/rutIn"
+                        android:paddingStart="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"
@@ -115,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/correo"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -126,7 +128,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:hint="@string/correoIn"
+                        android:paddingStart="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"
@@ -145,7 +148,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/nacimiento"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -156,7 +159,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:hint="@string/nacimientoIn"
+                        android:paddingStart="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"
@@ -175,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/telefono"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -186,7 +190,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:hint="@string/telefonoIn"
+                        android:paddingStart="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"
@@ -205,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/talkabout"
+                        android:text="@string/actividad"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -216,7 +221,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:hint="@string/nameandlastname"
+                        android:hint="@string/actividadIn"
+                        android:paddingStart="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:inputType="text"

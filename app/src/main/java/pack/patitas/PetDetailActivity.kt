@@ -2,14 +2,13 @@ package pack.patitas
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import coil.load
-import java.net.URI
 
 
 class PetDetailActivity : AppCompatActivity() {
@@ -31,7 +30,6 @@ class PetDetailActivity : AppCompatActivity() {
         val petRegion = intent.getStringExtra("petRegion")
         val petCommune = intent.getStringExtra("petCommune")
         val petUrl = intent.getStringExtra("petUrl")
-
 
         val nametext = findViewById<TextView>(R.id.name_detail)
         val tipotext = findViewById<TextView>(R.id.type_detail)
@@ -65,14 +63,17 @@ class PetDetailActivity : AppCompatActivity() {
 
         supportActionBar?.title = petName
 
-
         imageView.load(petImage) {
             placeholder(R.mipmap.placeholder_image_foreground)
         }
         val button: Button = findViewById(R.id.link_2)
         button.setOnClickListener(){
             openUrl(petUrl)
-
+        }
+        val adoptButton: Button = findViewById(R.id.adopme)
+        adoptButton.setOnClickListener {
+            val intent = Intent(this, FormularioActivity::class.java)
+            startActivity(intent)
         }
 
     }
