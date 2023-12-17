@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Patitas</string>
+
+    <!-- Pet Description Default -->
+    <string name="numberDefaul">0</string>
+    <string name="namePet">Sushi</string>
+    <string name="typePet">Dog</string>
+    <string name="agePet">20 Month</string>
+    <string name="statePet">For Adoption</string>
+    <string name="genderPet">Male</string>
+    <string name="descDefault">Lorem ipsum dolor sit amet consectetur adipiscing elit aenean senectus purus, class vehicula viverra feugiat facilisis litora cum auctor nullam facilisi, varius dignissim eu mollis tellus risus egestas blandit donec. Accumsan curabitur facilisis eros himenaeos dictum quisque cubilia urna feugiat, nisl imperdiet cursus rutrum neque sagittis ligula fusce. Euismod platea congue sagittis id volutpat tellus curabitur vitae interdum viverra ligula sociosqu, netus magnis pharetra quam lectus nisi nullam integer purus risus dapibus justo, malesuada donec non laoreet duis per arcu felis nascetur sapien pulvinar. </string>
+    <string name="team">ColoColo</string>
+    <string name="region">Maule</string>
+    <string name="commune">Molina</string>
+
+    <string name="datos">Data</string>
+    <string name="link">Visit Page</string>
+    <string name="search">What are you looking for?</string>
+    <string name="adopme"> Adopt Me!!!  </string>
+    <string name="titulo">PATITAS</string>
+    <string name="adopta">ADOPT</string>
+    <string name="agradecimientos">THANKS TO HUACHITOS.CL</string>
+    <string name="creadopor">"CREATED BY DANIEL ARIAS AND ALVARO MONSALVE"</string>
+    <string name="nameandlastname">Your Name and Surname</string>
+    <string name="correo">Your email</string>
+    <string name="telefono">Your contact phone</string>
+    <string name="nacimiento">Your date of birth</string>
+    <string name="rut">Your Rut</string>
+    <string name="actividad">Your economic activity, trade or profession</string>
+    <string name="nameandlastnameIn">Enter your Name and Surname</string>
+    <string name="correoIn">Enter your email</string>
+    <string name="telefonoIn">Enter your phone number</string>
+    <string name="nacimientoIn"> dd/mm/yyyy</string>
+    <string name="rutIn">Enter your Rut</string>
+    <string name="actividadIn">Tell us your economic activity, trade or profession</string>
+
+
+</resources>
