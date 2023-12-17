@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
+    android:backgroundTint="@color/background"
     tools:context=".FormularioActivity">
 
     <LinearLayout
@@ -28,6 +29,8 @@
             android:layout_marginTop="20dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:src="@mipmap/placeholder_image_foreground" />
 
         <ScrollView
@@ -36,19 +39,193 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp" >
 
-            <TextView
-                android:id="@+id/textView2"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-        </ScrollView>
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:text="@string/link" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editname"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/form6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/talkabout"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edit4"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/nameandlastname"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="text"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
         <Button
             android:id="@+id/adopme"
@@ -56,6 +233,8 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/adopme" />
     </LinearLayout>
 

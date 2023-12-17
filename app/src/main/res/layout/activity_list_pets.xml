@@ -33,8 +33,10 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/search"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:inputType="text"
-            android:textColor="@color/black"
+            android:textColor="@color/background"
             android:textSize="18sp" />
 
 

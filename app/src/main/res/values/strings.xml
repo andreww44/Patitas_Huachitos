@@ -21,6 +21,10 @@
     <string name="adopta">ADOPTA</string>
     <string name="agradecimientos">AGRADECIMIENTOS A HUACHITOS.CL</string>
     <string name="creadopor">"CREADO POR DANIEL ARIAS Y ALVARO MONSALVE"</string>
+    <string name="nameandlastname">Escribe tu Nombre y Apellido</string>
+    <string name="talkabout">Cuéntanos tu nombre completo</string>
+
+
 
 
 </resources>

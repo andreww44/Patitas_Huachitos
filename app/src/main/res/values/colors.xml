@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="backgroundCard">#313A3A</color>
-    <color name="background">#454E4E</color>
-    <color name="greenaqua">#33DAC9</color>
-    <color name="greenaqua2">#004C45</color>
-    <color name="yellow">#FFAF39</color>
+    <color name="white"> #fdfaf6</color>
+    <color name="backgroundCard">#323335</color>
+    <color name="background">#28292c</color>
+    <color name="greenaqua2">#42b883</color>
+    <color name="yellow">#fbbf24</color>
+    <color name="red">#f65b2a</color>
 
 </resources>
