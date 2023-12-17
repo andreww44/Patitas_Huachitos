@@ -72,15 +72,6 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
                 }
             }
 
-            itemView.setOnLongClickListener {
-                // Handle item long press
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    val selectedPet = pets[position]
-
-                }
-                true
-            }
         }
         val formularioButton: Button = itemView.findViewById(R.id.adoptme)
         init {
@@ -88,8 +79,12 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val selectedPet = pets[position]
+
                     val context = itemView.context
-                    val intent = Intent(context, FormularioActivity::class.java)
+                    val intent = Intent(context, FormularioActivity::class.java).apply{
+                        putExtra("petName", selectedPet.name)
+                        putExtra("petImage", selectedPet.urlImage)
+                    }
                     context.startActivity(intent)
                 }
             }
@@ -121,6 +116,9 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
         return pets.size
     }
 
+    fun getList():MutableList<Pet>{
+        return pets
+    }
     fun clearAndAddNewList(newList: List<Pet>) {
         pets.clear()
         pets.addAll(newList)

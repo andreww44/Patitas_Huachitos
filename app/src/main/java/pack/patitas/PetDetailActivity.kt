@@ -72,7 +72,10 @@ class PetDetailActivity : AppCompatActivity() {
         }
         val adoptButton: Button = findViewById(R.id.adopme)
         adoptButton.setOnClickListener {
-            val intent = Intent(this, FormularioActivity::class.java)
+            val intent = Intent(this, FormularioActivity::class.java).apply {
+                putExtra("petName", petName)
+                putExtra("petImage", petImage)
+            }
             startActivity(intent)
         }
 

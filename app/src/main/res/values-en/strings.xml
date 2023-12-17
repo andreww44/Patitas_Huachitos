@@ -14,7 +14,7 @@
     <string name="region">Maule</string>
     <string name="commune">Molina</string>
 
-    <string name="datos">Data</string>
+    <string name="datos">Details</string>
     <string name="link">Visit Page</string>
     <string name="search">What are you looking for?</string>
     <string name="adopme"> Adopt Me!!!  </string>
@@ -35,5 +35,7 @@
     <string name="rutIn">Enter your Rut</string>
     <string name="actividadIn">Tell us your economic activity, trade or profession</string>
 
-
+    <string name="formularioIn">Your details has been sent successfully. We will contact you soon!!!</string>
+    <string name="noIn">Enter your details</string>
+    <string name="aceptIn">Aceptar</string>
 </resources>

@@ -1,7 +1,10 @@
 package pack.patitas
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,14 +29,20 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter : PetAdapterRecyclerCard
+    private lateinit var adapter_2 : PetAdapterRecyclerCard
     private lateinit var listaDeMascotas : MutableList<Pet>
+    private lateinit var listFilt: MutableList<Pet>
+    private lateinit var editTextFiltro: EditText
     private lateinit var db: AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_pets)
 
+        editTextFiltro = findViewById(R.id.searchText)
+
         listaDeMascotas = mutableListOf(
         )
+
 
         recyclerView = findViewById(R.id.listRecycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -46,6 +55,23 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
             AppDatabase::class.java, "mascotasDB"
         ).build()
         fetchPetsFromAPI()
+
+
+        editTextFiltro.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                filterList(s.toString())
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+        })
     }
     private fun fetchPetsFromAPI() {
         val apiUrl = "https://huachitos.cl/api/animales"
@@ -87,6 +113,7 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
                 }
             }
             val petsFromDb = db.mascotaDao().getAllPets().map { it.toPet() }
+            listaDeMascotas = petsFromDb.toMutableList()
             updateRecyclerView(petsFromDb)
         }
     }
@@ -117,9 +144,9 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
                 val age = itemObject.getString("edad")
                 val state = itemObject.getString("estado")
                 val gender = itemObject.getString("genero")
-                val des1 = itemObject.getString("desc_fisica")
-                val des2 = itemObject.getString("desc_personalidad")
-                val des3 = itemObject.getString("desc_adicional")
+                val des1 = quitarTagsP(itemObject.getString("desc_fisica"))
+                val des2 = quitarTagsP(itemObject.getString("desc_personalidad"))
+                val des3 = quitarTagsP(itemObject.getString("desc_adicional"))
                 val sterilized = itemObject.getInt("esterilizado")
                 val vaccine = itemObject.getInt("vacunas")
                 val urlImage = itemObject.getString("imagen")
@@ -139,5 +166,36 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
     }
     override fun onItemClick(position: Int) {
 
+    }
+
+    private fun filterList(text: String){
+
+        listFilt = mutableListOf(
+        )
+
+        //adapter
+        listaDeMascotas.forEach{
+            if(it.name?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.types?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.gender?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.desF?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.desP?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.desA?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.team?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.region?.toLowerCase()?.contains(text.toLowerCase()) == true
+                || it.commune?.toLowerCase()?.contains(text.toLowerCase()) == true
+            ){
+                listFilt.add(it)
+            }
+        }
+        adapter.clearAndAddNewList(listFilt)
+
+
+    }
+
+    fun quitarTagsP(texto: String): String {
+        val textoLimpio= texto.replace(Regex("<p>|</p>"), "")
+
+        return textoLimpio
     }
 }

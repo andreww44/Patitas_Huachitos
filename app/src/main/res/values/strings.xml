@@ -34,5 +34,9 @@
     <string name="rutIn">Ingresa tu Rut</string>
     <string name="actividadIn">Dinos tu actividad economica, oficio o profesion</string>
 
+    <string name="formularioIn">Tus datos fueron enviados nos comunicaremos contigo en breve</string>
+    <string name="aceptIn">Aceptar</string>
+    <string name="noIn">Ingresa los datos correctamente</string>
+
 
 </resources>

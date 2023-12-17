@@ -23,7 +23,7 @@
             android:theme="?attr/actionBarTheme" />
 
         <ImageView
-            android:id="@+id/image_detail"
+            android:id="@+id/image_detail_2"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginStart="10dp"
@@ -35,9 +35,9 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="282dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" >
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,20 +57,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/nameandlastname"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/editname"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
-                        android:paddingStart="5dp"
                         android:hint="@string/nameandlastnameIn"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -88,20 +88,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/rut"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/editemail"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
                         android:hint="@string/rutIn"
-                        android:paddingStart="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -119,20 +119,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/correo"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/editphone"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
                         android:hint="@string/correoIn"
-                        android:paddingStart="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -150,20 +150,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/nacimiento"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/edit2"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
                         android:hint="@string/nacimientoIn"
-                        android:paddingStart="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -181,20 +181,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/telefono"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/edit3"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
                         android:hint="@string/telefonoIn"
-                        android:paddingStart="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -212,20 +212,20 @@
                         android:layout_marginEnd="10dp"
                         android:text="@string/actividad"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/edit4"
                         android:layout_width="match_parent"
                         android:layout_height="51dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:background="@color/white"
                         android:ems="10"
                         android:hint="@string/actividadIn"
-                        android:paddingStart="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:inputType="text"
+                        android:paddingStart="5dp"
                         android:textColor="@color/background"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -234,7 +234,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/adopme"
+            android:id="@+id/adopme_2"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="65dp"
