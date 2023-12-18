@@ -51,6 +51,7 @@
             <!-- Botones para cada tipo de animal -->
             <Button
                 android:id="@+id/btnPerro"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -61,6 +62,7 @@
 
             <Button
                 android:id="@+id/btnGato"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -71,6 +73,7 @@
 
             <Button
                 android:id="@+id/btnAve"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -81,6 +84,7 @@
 
             <Button
                 android:id="@+id/btnConejo"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -91,6 +95,7 @@
 
             <Button
                 android:id="@+id/btnRoedor"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -101,6 +106,7 @@
 
             <Button
                 android:id="@+id/btnOtro"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="15dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"

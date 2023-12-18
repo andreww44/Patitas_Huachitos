@@ -30,7 +30,6 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter : PetAdapterRecyclerCard
-    private lateinit var adapter_2 : PetAdapterRecyclerCard
     private lateinit var listaDeMascotas : MutableList<Pet>
     private lateinit var listFilt: MutableList<Pet>
     private lateinit var editTextFiltro: EditText

@@ -18,8 +18,6 @@ import pack.patitas.identies.Pet
 
 class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.Adapter<PetAdapterRecyclerCard.PetViewHolder>(){
 
-
-
     inner class PetViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         val nameTextView: TextView = itemView.findViewById(R.id.name)
@@ -74,6 +72,26 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
 
         }
         val formularioButton: Button = itemView.findViewById(R.id.adoptme)
+        val sharebutton: Button = itemView.findViewById(R.id.sharebutton)
+
+        init {
+            sharebutton.setOnClickListener{
+                if (position != RecyclerView.NO_POSITION) {
+                    val selectedPet = pets[position]
+                    val intent = Intent().apply{
+                        action = Intent.ACTION_SEND
+                        putExtra(Intent.EXTRA_TEXT, selectedPet.url)
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TITLE, selectedPet.name)
+
+                    }
+                    val context = itemView.context
+                    val sharedIntent = Intent.createChooser(intent, null)
+                    context.startActivity(sharedIntent)
+                }
+
+            }
+        }
         init {
             formularioButton.setOnClickListener {
                 val position = adapterPosition
@@ -124,6 +142,8 @@ class PetAdapterRecyclerCard (private val pets: MutableList<Pet>): RecyclerView.
         pets.addAll(newList)
         notifyDataSetChanged()
     }
+
+
 
 
 

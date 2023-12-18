@@ -16,7 +16,7 @@
     <string name="datos">Datos</string>
     <string name="link">Visitar Página</string>
     <string name="search">¿Qué Estás Buscando?</string>
-    <string name="adopme"> Adoptame!!!  </string>
+    <string name="adopme"> Adoptame </string>
     <string name="titulo">PATITAS</string>
     <string name="adopta">ADOPTA</string>
     <string name="agradecimientos">AGRADECIMIENTOS A HUACHITOS.CL</string>
@@ -36,7 +36,7 @@
 
     <string name="formularioIn">Tus datos fueron enviados nos comunicaremos contigo en breve</string>
     <string name="aceptIn">Aceptar</string>
-    <string name="noIn">Ingresa los datos correctamente</string>
+    <string name="noIn">No hay conexion a internet</string>
 
 
 </resources>

@@ -1,6 +1,10 @@
 package pack.patitas
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -44,14 +48,39 @@ class FormularioActivity : AppCompatActivity() {
         // Crear un constructor de AlertDialog
         val builder = AlertDialog.Builder(this)
 
-        // Configurar el mensaje y el botón de aceptar
-        builder.setMessage(R.string.formularioIn)
-            .setPositiveButton(R.string.aceptIn) { dialog, _ ->
-                dialog.dismiss()
-            }
+        if (isConnectedToInternet()) {
+            builder.setMessage(R.string.formularioIn)
+                .setPositiveButton(R.string.aceptIn) { dialog, _ ->
+                    dialog.dismiss()
+                }
+            val dialog = builder.create()
+            dialog.show()
+        } else {
+            builder.setMessage(R.string.noIn)
+                .setPositiveButton(R.string.aceptIn) { dialog, _ ->
+                    dialog.dismiss()
+                }
+            val dialog = builder.create()
+            dialog.show()
+        }
 
-        // Crear y mostrar el cuadro de diálogo
-        val dialog = builder.create()
-        dialog.show()
+    }
+
+    private fun isConnectedToInternet(): Boolean {
+        val connectivityManager =
+            getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val network = connectivityManager.activeNetwork
+            val capabilities =
+                connectivityManager.getNetworkCapabilities(network)
+
+            return capabilities?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                ?: false
+        } else {
+            // Versiones anteriores a Android 6.0
+            val networkInfo = connectivityManager.activeNetworkInfo
+            return networkInfo?.isConnected ?: false
+        }
     }
 }
