@@ -11,40 +11,113 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="46dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            android:fontFamily="@font/mainfont"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
 
-            app:titleTextColor="@color/white"
-            android:fontFamily="@font/fuenteanimal"
-            app:title="@string/titulo"/>
+            android:theme="?attr/actionBarTheme"
+            app:title="@string/titulo"
+            app:titleTextColor="@color/white" />
 
         <EditText
             android:id="@+id/searchText"
             android:layout_width="match_parent"
             android:layout_height="51dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/search"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/mainfont"
             android:inputType="text"
             android:textColor="@color/background"
             android:textSize="18sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!-- Botones para cada tipo de animal -->
+            <Button
+                android:id="@+id/btnPerro"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_perro_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <Button
+                android:id="@+id/btnGato"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_gato_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <Button
+                android:id="@+id/btnAve"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_ave_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <Button
+                android:id="@+id/btnConejo"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_conejo_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <Button
+                android:id="@+id/btnRoedor"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_raton_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <Button
+                android:id="@+id/btnOtro"
+                android:layout_width="15dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:icon="@mipmap/ic_otro_foreground"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="60dp" />
+
+            <!-- Repite para los otros tipos de animales -->
+        </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listRecycler"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/backgroundCard" />
 
     </LinearLayout>

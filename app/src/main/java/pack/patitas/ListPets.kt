@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +43,31 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
 
         listaDeMascotas = mutableListOf(
         )
-
+        //btnes
+        val btnPerro = findViewById<Button>(R.id.btnPerro)
+        btnPerro.setOnClickListener {
+            filtrarPorTipo("perro")
+        }
+        val btnGato = findViewById<Button>(R.id.btnGato)
+        btnGato.setOnClickListener {
+            filtrarPorTipo("gato")
+        }
+        val btnAve = findViewById<Button>(R.id.btnAve)
+        btnAve.setOnClickListener {
+            filtrarPorTipo("ave")
+        }
+        val btnConejo = findViewById<Button>(R.id.btnConejo)
+        btnConejo.setOnClickListener {
+            filtrarPorTipo("conejo")
+        }
+        val btnRoedor = findViewById<Button>(R.id.btnRoedor)
+        btnRoedor.setOnClickListener {
+            filtrarPorTipo("roedor")
+        }
+        val btnOtro = findViewById<Button>(R.id.btnOtro)
+        btnOtro.setOnClickListener {
+            filtrarPorTipo("exotico")
+        }
 
         recyclerView = findViewById(R.id.listRecycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -109,7 +134,7 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
                     db.mascotaDao().insertAll(newEntity)
                 } else {
                     // La mascota con el mismo ID y nombre ya existe en la base de datos
-                    // Aquí puedes decidir si actualizarla o dejarla como está
+
                 }
             }
             val petsFromDb = db.mascotaDao().getAllPets().map { it.toPet() }
@@ -166,6 +191,10 @@ class ListPets : AppCompatActivity(), APICallback, RecyplerPetInterface {
     }
     override fun onItemClick(position: Int) {
 
+    }
+    private fun filtrarPorTipo(tipo: String) {
+        val listaFiltrada = listaDeMascotas.filter { it.types?.toLowerCase() == tipo.toLowerCase() }
+        adapter.clearAndAddNewList(listaFiltrada)
     }
 
     private fun filterList(text: String){

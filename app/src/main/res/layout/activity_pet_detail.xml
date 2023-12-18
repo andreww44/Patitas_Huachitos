@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/datos"
+                    android:fontFamily="@font/mainfont"
                     android:textAlignment="center"
                     android:textSize="36sp"
                     android:textStyle="bold" />
@@ -70,6 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Nombre:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -81,6 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/namePet"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -98,6 +101,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Tipo:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -109,6 +113,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/typePet"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -126,6 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Edad:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -137,6 +143,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/agePet"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -154,6 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Estado:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -165,6 +173,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/statePet"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -182,6 +191,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Genero:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -193,6 +203,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/genderPet"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -210,6 +221,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Esterilizado:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -221,6 +233,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/numberDefaul"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -238,6 +251,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Vacunado:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -249,6 +263,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/numberDefaul"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -267,6 +282,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Equipo:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -278,6 +294,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/team"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -295,6 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Región:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -306,6 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/region"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -323,6 +342,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Comuna:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -334,6 +354,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/commune"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -352,6 +373,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Fisico:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -365,6 +387,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="@string/descDefault"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="italic" />
@@ -382,6 +405,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Personalidad:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -393,6 +417,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/descDefault"
+                        android:fontFamily="@font/mainfont"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="italic" />
@@ -411,6 +436,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Adicionales:  "
+                        android:fontFamily="@font/mainfont"
                         android:textAlignment="textEnd"
                         android:textColor="@color/yellow"
                         android:textSize="20sp"
@@ -421,6 +447,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="@font/mainfont"
                         android:text="@string/descDefault"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -438,6 +465,7 @@
             android:layout_height="65dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/mainfont"
             android:text="@string/link" />
 
         <Button
@@ -448,6 +476,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/mainfont"
             android:text="@string/adopme" />
     </LinearLayout>
 
